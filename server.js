@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const API_KEY = 'INSERISCI_LA_TUA_API_KEY_DI_WEATHERAPI';
+const API_KEY = process.env.API_KEY;
 
 app.post('/get_weather', async (req, res) => {
   const { city } = req.body;
